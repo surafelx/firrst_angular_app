@@ -1,27 +1,66 @@
-# FirstAngularApp
+# First Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+<img src="first-angular-app.jpg" />
 
-## Development server
+Run the app, after installing the dependencies, using
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```npm
+    ng serve
+```
 
-## Code scaffolding
+## What I did?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Replaced the `app/files`
 
-## Build
+1. `app.component.html`
+   
+```js
+    <h1>Welcome to Angular {{ name }}</h1>
+    <p> This is your <b>{{title}}</b></p>
+    Enter your name: <input type="text" [(ngModel)] = "name">
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. `app.component.ts`
 
-## Running unit tests
+```js 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    import { Component } from '@angular/core';
 
-## Running end-to-end tests
+    @Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+    })
+    export class AppComponent {
+    name = '';
+    title='first-angular-app'
+    }
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+1. `app.module.ts`
+
+```js
+
+    import { BrowserModule } from '@angular/platform-browser';
+    import { NgModule } from '@angular/core';
+    import { FormsModule } from '@angular/forms';
+    import { AppComponent } from './app.component';
+
+    @NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+
+```
