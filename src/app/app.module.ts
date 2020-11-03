@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServerstwoComponent } from './serverstwo/serverstwo.component';
+import { WarningComponent } from './warning/warning.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    ServerComponent, ServerstwoComponent
+    ServerComponent, ServerstwoComponent, SuccessComponent, WarningComponent
   ],
   imports: [
     NgbModule,
