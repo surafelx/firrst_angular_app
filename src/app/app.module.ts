@@ -4,11 +4,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
+import { ServerstwoComponent } from './serverstwo/serverstwo.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    ServerComponent
+    ServerComponent, ServerstwoComponent
   ],
   imports: [
     NgbModule,
