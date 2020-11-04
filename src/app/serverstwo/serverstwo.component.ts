@@ -11,8 +11,13 @@ import { Component, OnInit } from '@angular/core';
   `],
 })
 export class ServerstwoComponent implements OnInit {
-
-  constructor() { }
+  //Property Binding
+  allowNewServer = false;
+  constructor() { 
+    setTimeout(() => {
+      this.allowNewServer = true
+    }, 2000)
+  }
 
   ngOnInit(): void {
   }
