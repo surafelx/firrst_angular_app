@@ -12,7 +12,9 @@
 <h3>{{inputEventData}} </h3> -->
  
 <!-- Events -->
-<!-- <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> -->
+<input class="form-control" type="text" [(ngModel)] = "serverName">
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+
 <!-- SERVER DIRECTIVE NGIF-->
 <!-- <p *ngIf="!serverCreated; else noServer"> Server was created, server name is {{ inputEventData }} </p> -->
 <!--SERVER DIRECTIVE NG-TEMPLATE USING LOCAL REFERENCES -->
