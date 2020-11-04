@@ -1,4 +1,13 @@
 <p>serverstwo works!</p>
 <!-- Property Binding -->
-<button class="btn btn-primary" [disabled]="allowNewServer">Add Server</button>
+<label> Servre Name</label>
+<input
+    type="text"
+    class="form-control"
+    (input) = "onUpdateServerName($event)" />
+<h3>The value for the input here is {{inputEventData}} </h3>
+<!-- Events -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+
+<p> {{ serverCreationStatus }} </p>
 <app-server></app-server>

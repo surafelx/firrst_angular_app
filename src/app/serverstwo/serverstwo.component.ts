@@ -13,6 +13,9 @@ import { Component, OnInit } from '@angular/core';
 export class ServerstwoComponent implements OnInit {
   //Property Binding
   allowNewServer = false;
+  serverCreationStatus = "No server was created";
+
+  inputEventData = "Nothing here"
   constructor() { 
     setTimeout(() => {
       this.allowNewServer = true
@@ -20,6 +23,15 @@ export class ServerstwoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  //Reacting to Events
+  onCreateServer() {
+    this.serverCreationStatus = "Server was created 👍";
+  }
+
+  onUpdateServerName(event: Event) {
+    this.inputEventData = (<HTMLInputElement>event.target).value;
+    console.log(event);
   }
 
 }
