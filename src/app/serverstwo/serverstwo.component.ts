@@ -26,7 +26,7 @@ export class ServerstwoComponent implements OnInit {
   }
   //Reacting to Events
   onCreateServer() {
-    this.serverCreationStatus = "Server was created 👍";
+    this.serverCreationStatus = "Server was created 👍" + this.inputEventData;
   }
 
   onUpdateServerName(event: Event) {
