@@ -16,6 +16,7 @@ export class ServerstwoComponent implements OnInit {
   serverCreationStatus = "No server was created";
   inputEventData = "Nothing here";
   userName = "";
+  serverCreated = false;
 
   constructor() { 
     setTimeout(() => {
@@ -28,6 +29,7 @@ export class ServerstwoComponent implements OnInit {
   //Reacting to Events
   onCreateServer() {
     this.serverCreationStatus = "Server was created 👍" + this.inputEventData;
+    this.serverCreated = true;
   }
 
   onUpdateServerName(event: Event) {

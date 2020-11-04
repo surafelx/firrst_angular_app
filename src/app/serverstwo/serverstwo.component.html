@@ -13,8 +13,13 @@
  
 <!-- Events -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
-
-<p> {{ serverCreationStatus }} </p>
+<!-- SERVER DIRECTIVE NGIF-->
+<p *ngIf="!serverCreated; else noServer"> Server was created, server name is {{ inputEventData }} </p>
+<!--SERVER DIRECTIVE NG-TEMPLATE USING LOCAL REFERENCES -->
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
+<!-- <p> {{ serverCreationStatus }} </p> -->
 <app-server></app-server>
 
 <ol>
@@ -23,11 +28,12 @@
     <li>Add a button which may be clicked if the username isn't an empty string</li> 
 </ol>
 
-<div class="form-group">
+<!-- <div class="form-group">
 <label>Enter Username</label> 
 <input type="text" class="form-control" [(ngModel)] = "userName"> 
 <p>{{userName}}</p>
 <button class="btn btn btn-primary" [disabled]="!userName" (click)="onUpdateUserName()">
     Reset
 </button>
-</div>
+</div> -->
+
