@@ -14,8 +14,8 @@ export class ServerstwoComponent implements OnInit {
   //Property Binding
   allowNewServer = false;
   serverCreationStatus = "No server was created";
+  inputEventData = "Nothing here";
 
-  inputEventData = "Nothing here"
   constructor() { 
     setTimeout(() => {
       this.allowNewServer = true

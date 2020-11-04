@@ -6,6 +6,11 @@
     class="form-control"
     (input) = "onUpdateServerName($event)" />
 <h3>The value for the input here is {{inputEventData}} </h3>
+
+<!-- Two Way Binding(ngModel) -->
+<input type="text" class="form-control" [(ngModel)] = "inputEventData">
+<h3>{{inputEventData}} </h3>
+
 <!-- Events -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
 
