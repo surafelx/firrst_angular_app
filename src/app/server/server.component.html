@@ -1,2 +1,4 @@
-<!-- <p> Server ID is {{serverId}} and Server Status is {{serverStatus}}, and again the Status of the server, this time in method form: {{ getServerStatus() }} </p> -->
+<p> Server ID is {{serverId}} and Server Status is {{serverStatus}}, and again the Status of the server, this time in method form: {{ getServerStatus() }} </p>
+<p [ngClass] = "{active: serverStatus === 'Active'}" 
+[ngStyle]="{backgroundColor: getColor()}"> Server ID is {{serverId}} and Server Status is {{serverStatus}}, and again the Status of the server, this time in method form: {{ getServerStatus() }} </p>
 

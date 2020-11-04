@@ -7,11 +7,12 @@ import { ServerComponent } from './server/server.component';
 import { ServerstwoComponent } from './serverstwo/serverstwo.component';
 import { WarningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
+import { ServerthreeComponent } from './serverthree/serverthree.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
-    ServerComponent, ServerstwoComponent, SuccessComponent, WarningComponent
+    ServerComponent, ServerstwoComponent, SuccessComponent, WarningComponent, ServerthreeComponent
   ],
   imports: [
     NgbModule,

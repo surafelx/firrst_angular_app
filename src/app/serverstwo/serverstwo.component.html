@@ -1,32 +1,32 @@
 <p>serverstwo works!</p>
 <!-- Property Binding -->
-<label> Servre Name</label>
+<!-- <label> Servre Name</label>
 <input
     type="text"
     class="form-control"
     (input) = "onUpdateServerName($event)" />
-<h3>The value for the input here is {{inputEventData}} </h3>
+<h3>The value for the input here is {{inputEventData}} </h3> -->
 
 <!-- Two Way Binding(ngModel) -->
-<input type="text" class="form-control" [(ngModel)] = "inputEventData">
-<h3>{{inputEventData}} </h3>
+<!-- <input type="text" class="form-control" [(ngModel)] = "inputEventData">
+<h3>{{inputEventData}} </h3> -->
  
 <!-- Events -->
-<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> -->
 <!-- SERVER DIRECTIVE NGIF-->
-<p *ngIf="!serverCreated; else noServer"> Server was created, server name is {{ inputEventData }} </p>
+<!-- <p *ngIf="!serverCreated; else noServer"> Server was created, server name is {{ inputEventData }} </p> -->
 <!--SERVER DIRECTIVE NG-TEMPLATE USING LOCAL REFERENCES -->
-<ng-template #noServer>
+<!-- <ng-template #noServer>
     <p>No server was created</p>
-</ng-template>
+</ng-template> -->
 <!-- <p> {{ serverCreationStatus }} </p> -->
-<app-server></app-server>
+<!-- <app-server></app-server> -->
 
-<ol>
+<!-- <ol>
     <li>Add an input Field which updates a property via Two way binding. </li>
     <li> Output the username property via String Interpolation</li>
     <li>Add a button which may be clicked if the username isn't an empty string</li> 
-</ol>
+</ol> -->
 
 <!-- <div class="form-group">
 <label>Enter Username</label> 
