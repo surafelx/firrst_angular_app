@@ -15,6 +15,7 @@ export class ServerstwoComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = "No server was created";
   inputEventData = "Nothing here";
+  userName = "";
 
   constructor() { 
     setTimeout(() => {
@@ -32,6 +33,10 @@ export class ServerstwoComponent implements OnInit {
   onUpdateServerName(event: Event) {
     this.inputEventData = (<HTMLInputElement>event.target).value;
     console.log(event);
+  }
+
+  onUpdateUserName() {
+    this.userName = ""
   }
 
 }
